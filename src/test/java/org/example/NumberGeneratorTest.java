@@ -32,9 +32,9 @@ public class NumberGeneratorTest {
         Set<Character> set = new HashSet<>();
 
         NumberGenerator generator = new NumberGenerator();
-
+        String number = generator.generateNum();
         for(int i=0; i<4; i++) {
-            set.add(generator.generateNum().charAt(i));
+                set.add(number.charAt(i));
         }
 
         boolean result = set.size() != 4;
@@ -48,9 +48,9 @@ public class NumberGeneratorTest {
         Set<Character> set = new HashSet<>();
 
         NumberGenerator generator = new NumberGenerator();
-
+        String number = generator.generateNum();
         for(int i=0; i<4; i++) {
-            set.add(generator.generateNum().charAt(i));
+            set.add(number.charAt(i));
         }
 
         boolean result = set.size() == 4;
