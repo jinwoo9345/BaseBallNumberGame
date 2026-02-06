@@ -16,8 +16,9 @@ public class InputUI {
     }
 
     public String inputNumber() {
+
         while (true) {
-            System.out.print("4자리의 서로다른 숫자를 입력하시오: ");
+            System.out.print("4자리의 서로다른 숫자를 입력하시오(history 명령어는 3): ");
             String input = scanner.nextLine();
 
             // 검증기를 통해 검사

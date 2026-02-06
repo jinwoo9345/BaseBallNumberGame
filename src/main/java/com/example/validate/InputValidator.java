@@ -7,6 +7,10 @@ public class InputValidator {
 
     public boolean validate(String number) {
         Set<Character> set = new HashSet<Character>();
+
+        if(number.equals("3")){
+            return true;
+        }
         // 먼저 네자리인지, 네자리 모두 숫자인지
         if (number.length() != 4 || !number.matches("[0-9]+")) {
             return false;
