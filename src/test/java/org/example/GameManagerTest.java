@@ -23,7 +23,6 @@ public class GameManagerTest {
         GameManager gameManager = new GameManager(generator);
 
         gameManager.play();
-
     }
 
 }
