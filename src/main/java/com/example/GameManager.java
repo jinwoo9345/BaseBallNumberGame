@@ -15,7 +15,7 @@ public class GameManager {
     private final NumberMacher numberMacher;
     private final InputUI inputUI;
     private final OutputUI outputUI;
-    private List<String> history;
+    private final List<String> history;
 
 
     public GameManager(NumberGenerator generator) {
