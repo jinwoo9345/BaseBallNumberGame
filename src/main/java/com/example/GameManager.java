@@ -47,7 +47,7 @@ public class GameManager {
             Result result = numberMacher.matchNumber(answer,input);
 
             // 결과를 history에 저장
-            String log = "시도: " + input+ "\n" + "결과: " + result.getResult();
+            String log = "시도: " + input+ "-->" + "결과: " + result.getResult();
             history.add(log);
 
             outputUI.printResult(result);
