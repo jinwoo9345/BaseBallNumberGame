@@ -1,4 +1,6 @@
-package com.example;
+package com.example.validate;
+
+import com.example.Result.Result;
 
 public class NumberMacher {
 

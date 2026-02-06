@@ -1,4 +1,4 @@
-package com.example;
+package com.example.Result;
 
 public enum ResultEnum {
     STRIKE("스트라이크"),

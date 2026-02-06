@@ -1,6 +1,6 @@
 package org.example;
 
-import com.example.NumberMacher;
+import com.example.validate.NumberMacher;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

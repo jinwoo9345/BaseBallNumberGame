@@ -1,6 +1,6 @@
 package org.example;
 
-import com.example.InputValidator;
+import com.example.validate.InputValidator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

@@ -1,11 +1,12 @@
-package com.example;
+package com.example.NumberGenerator;
 
 import java.util.LinkedHashSet;
 import java.util.Random;
 import java.util.stream.Collectors;
 
-public class NumberGenerator {
+public class RandomGenerator implements NumberGenerator {
 
+    @Override
     public  String generateNum() {
         LinkedHashSet<Integer> number = new LinkedHashSet<>();
         Random rand = new Random();

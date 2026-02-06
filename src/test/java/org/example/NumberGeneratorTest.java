@@ -1,6 +1,7 @@
 package org.example;
 
-import com.example.NumberGenerator;
+import com.example.NumberGenerator.NumberGenerator;
+import com.example.NumberGenerator.RandomGenerator;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
 
@@ -13,7 +14,7 @@ public class NumberGeneratorTest {
     @DisplayName("생성된 숫자는 4자리여야 한다.")
     @RepeatedTest(100)
     void lengthCheck() {
-        NumberGenerator generator = new NumberGenerator();
+        NumberGenerator generator = new RandomGenerator();
 
         String result = generator.generateNum();
 
@@ -23,7 +24,7 @@ public class NumberGeneratorTest {
     @DisplayName("생성된 숫자는 중복되지 않아야 한다.")
     @RepeatedTest(100)
     void duplicationCheck() {
-        NumberGenerator generator = new NumberGenerator();
+        NumberGenerator generator = new RandomGenerator();
         String result = generator.generateNum();
 
         Set<Character> uniqueChars = new HashSet<>();
