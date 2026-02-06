@@ -12,6 +12,7 @@ public class InputUI {
     public InputUI() {
         this.scanner = new Scanner(System.in);
         this.validator = new InputValidator();
+
     }
 
     public String inputNumber() {

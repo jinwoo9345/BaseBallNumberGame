@@ -8,7 +8,7 @@ import org.junit.jupiter.api.RepeatedTest;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class NumberGeneratorTest {
     @DisplayName("생성된 숫자는 4자리여야 한다.")
