@@ -1,7 +1,8 @@
 package org.example;
 
 import com.example.NumberGenerator;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,53 +10,29 @@ import java.util.Set;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class NumberGeneratorTest {
-    @Test
-    void  생성한_숫자는_4자리_숫자면_성공(){
+    @DisplayName("생성된 숫자는 4자리여야 한다.")
+    @RepeatedTest(100)
+    void lengthCheck() {
         NumberGenerator generator = new NumberGenerator();
 
-        boolean result = generator.generateNum().length()==4;
+        String result = generator.generateNum();
 
-        assertThat(result).isTrue();
+        assertThat(result.length()).isEqualTo(4);
     }
 
-    @Test
-    void 생성한_숫자가_4자리가_아니면_실패(){
+    @DisplayName("생성된 숫자는 중복되지 않아야 한다.")
+    @RepeatedTest(100)
+    void duplicationCheck() {
         NumberGenerator generator = new NumberGenerator();
+        String result = generator.generateNum();
 
-        boolean result = generator.generateNum().length()!=4;
-
-        assertThat(result).isFalse();
-    }
-
-    @Test
-    void 생성한_숫자가_하나라도_중복되면_실패(){
-        Set<Character> set = new HashSet<>();
-
-        NumberGenerator generator = new NumberGenerator();
-        String number = generator.generateNum();
-        for(int i=0; i<4; i++) {
-                set.add(number.charAt(i));
+        Set<Character> uniqueChars = new HashSet<>();
+        for (char c : result.toCharArray()) {
+            uniqueChars.add(c);
         }
 
-        boolean result = set.size() != 4;
 
-        assertThat(result).isFalse();
-
+        assertThat(uniqueChars.size()).isEqualTo(4);
     }
 
-    @Test
-    void 생성한_숫자가_전부_다르면_성공(){
-        Set<Character> set = new HashSet<>();
-
-        NumberGenerator generator = new NumberGenerator();
-        String number = generator.generateNum();
-        for(int i=0; i<4; i++) {
-            set.add(number.charAt(i));
-        }
-
-        boolean result = set.size() == 4;
-
-        assertThat(result).isTrue();
-
-    }
 }
